@@ -1,7 +1,10 @@
-/* Body */
+/* Body & Global elements */
 
 body {
     background-color: #999;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 h1,
@@ -10,8 +13,36 @@ h3 {
     color: #373737;
 }
 
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+h4 {
+    font-size: 18px;
+}
+
 a {
     color: #fff;
+    text-decoration: none;
+}
+
+p {
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -30,6 +61,17 @@ a {
 
 .contentbox li {
     color: #373737;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.contentbox h4 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.contentbox i {
+    color: #5adae2;
 }
 
 .contentbox-beige {
@@ -117,15 +159,6 @@ html {
     margin-right: 0;
 }
 
-nav ul li {
-    display: inline-block;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
 .img-responsive {
     max-width: 100%;
     height: auto;
@@ -139,8 +172,17 @@ user-select: none;
 /*header and footer*/
 
 .brand {
+    font-size: 22px;
     padding-top: 45px;
     padding-bottom: 45px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+.nav li {
+    font-size: 18px;
 }
 
 .nav {
@@ -165,6 +207,14 @@ user-select: none;
 
 .footer p {
     color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 0;
+}
+
+.footer ul {
+    font-size: 16px;
+    font-weight: 200;
 }
 
 .footer li {
@@ -183,6 +233,22 @@ user-select: none;
     color: #999;
 }
 
+.social-list {
+    text-align: center;
+}
+
+.social-list li {
+    display: inline-block;
+}
+
+.social-list i {
+    background-color: #2d2d2d;
+    margin: 5px 10px 0 0;
+    padding: 3px;
+    width: 40px;
+    display: inline-block;
+}
+
 
 /* main content */
 
@@ -197,8 +263,14 @@ user-select: none;
     margin-bottom: 50px;
 }
 
+.page-header h1 {
+    font-weight: bold;
+    text-align: center;
+}
+
 .page-header p {
     padding-left: 15px;
+    font-size: 26px;
 }
 
 
@@ -206,6 +278,20 @@ user-select: none;
 
 .page-header.home {
     margin-bottom: 0;
+}
+
+.page-header.home h1 {
+    font-weight: normal;
+    text-align: center;
+}
+
+.page-header.home p {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.page-header.home a {
+    padding-left: 35px;
 }
 
 .home h1 {
@@ -227,6 +313,12 @@ user-select: none;
     padding-bottom: 70px;
 }
 
+.main-content-top i {
+    color: #5adae2;
+    vertical-align: -10px;
+    /* center icon to heading*/
+}
+
 .main-content-bottom {
     padding-bottom: 75px;
 }
@@ -244,7 +336,17 @@ user-select: none;
     background-color: #5adae2;
     color: #fff;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0 0 5px 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.tile p {
+    margin: 0;
+}
+
+.tile i {
+    font-size: 108px;
 }
 
 
@@ -256,6 +358,35 @@ user-select: none;
 
 .team-member {
     margin-bottom: 20px;
+}
+
+.team-member h1 {
+    text-align: center;
+}
+
+.team-member ul {
+    text-align: right;
+}
+
+.team-member li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.team-member a {
+    color: #1e1f1f;
+}
+
+.team-member i {
+    background-color: #edecea;
+    color: #1e1f1f;
+    font-size: 16px;
+    padding: 3px;
+    margin: 0;
+    width: 22px;
+    display: inline-block;
+    text-align: center;
 }
 
 
@@ -277,10 +408,37 @@ user-select: none;
 
 .info li {
     display: inline-block;
+    font-size: 14px;
+    background-color: #edecea;
+    padding: 5px 8px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.info i {
+    color: #1e1f1f;
+    display: inline-block;
+    width: 22px;
+    text-align: center;
 }
 
 .sidebar {
-    padding: 10px;
+    padding: 30px;
+}
+
+.sidebar p {
+    font-size: 13px;
+    line-height: 18;
+    color: #1e1f1f;
+    padding-bottom: 10px;
+}
+
+.sidebar a {
+    color: #1e1f1f;
+}
+
+.sidebar li {
+    font-size: 14px;
 }
 
 .recent-entries img {
@@ -300,4 +458,13 @@ user-select: none;
 .form p,
 .map h2 {
     margin-left: 15px;
+}
+
+.address,
+.address a {
+    color: #1e1f1f;
+}
+
+.address li {
+    padding-bottom: 5px;
 }
