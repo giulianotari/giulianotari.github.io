@@ -1,5 +1,84 @@
 /* table */
 
+table,
+caption,
+thead,
+tbody,
+tr,
+th,
+td {
+    display: block;
+}
+
+.contact-table caption {
+    color: #373737;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.contact-table tr:nth-child(odd) {
+    background-color: #f9f8f8;
+}
+
+.contact-table tr:hover {
+    background-color: #999;
+    cursor: crosshair;
+}
+
+.contact-table {
+    margin-bottom: 30px;
+}
+
+.contact-table td {
+    color: #373737;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30%;
+    border-bottom: 1px dotted #373737;
+    position: relative;
+}
+
+
+/* hide table header */
+
+.contact-table th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+
+/* td content becomes vertical list */
+
+.contact-table td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 30%;
+    padding-right: 10px;
+}
+
+
+/* tables headers become vertical list */
+
+.contact-table td:nth-of-type(1):before {
+    content: "Name";
+}
+
+.contact-table td:nth-of-type(2):before {
+    content: "Title";
+}
+
+.contact-table td:nth-of-type(3):before {
+    content: "Phone";
+}
+
+.contact-table td:nth-of-type(4):before {
+    content: "Email";
+}
+
 
 /* Smartphone landscape */
 
@@ -9,19 +88,16 @@
 /* Small devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
+    .contact-table caption {
+        font-size: 24px;
+    }
     .contact-table {
         width: 99%;
         margin-bottom: 50px;
         padding-right: 15px;
     }
-    .contact-table caption {
-        color: #373737;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        font-size: 24px;
-        font-weight: 200;
-    }
     .contact-table th {
+        position: static;
         text-align: left;
         background-color: white;
         color: #373737;
@@ -31,21 +107,41 @@
         padding-left: 5px;
     }
     .contact-table td {
-        color: #373737;
-        padding-top: 5px;
-        padding-bottom: 5px;
         padding-left: 5px;
     }
-    .contact-table tr:nth-child(odd) {
-        background-color: #f9f8f8;
+    /* reestablish table default display status */
+    table {
+        display: table;
     }
-    .contact-table tr:hover {
-        background-color: #999;
-        cursor: crosshair;
+    caption {
+        display: table-caption;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tbody {
+        display: table-row-group;
+    }
+    tr {
+        display: table-row;
+    }
+    th,
+    td {
+        display: table-cell;
+    }
+    .contact-table td:nth-of-type(1):before,
+    .contact-table td:nth-of-type(2):before,
+    .contact-table td:nth-of-type(3):before,
+    .contact-table td:nth-of-type(4):before {
+        content: "";
     }
 }
 
 
 /* Medium devices (desktops, 992px and up) */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .contact-table caption {
+        font-size: 24px;
+    }
+}

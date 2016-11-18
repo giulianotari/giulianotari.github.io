@@ -1,70 +1,93 @@
 /*form*/
 
+.form {
+    margin-bottom: 60px;
+}
+
+.form p {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    padding-top: 25px;
+    padding-right: 0;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    margin-bottom: 25px;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: inline-block;
+    height: 20px;
+    font-size: 14px;
+    color: #373737;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.contact-form input {
+    width: 445px;
+}
+
+.contact-form textarea {
+    width: 445px;
+    padding-top: 15px;
+    padding-right: 0;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: inline-block;
+    color: #373737;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+input[type="submit"].btn {
+    border: 0;
+    padding: 0 22px;
+    /* top bottom=0 left/right=22 */
+    margin-top: 10px;
+    color: #fff;
+    height: 50px;
+    width: 150px;
+    -webkit-transition: background .5s ease 0s;
+    -moz-transition: background .5s ease 0s;
+    transition: background .5s ease 0s;
+}
+
 
 /* Smartphone landscape */
 
-@media (min-width: 480px) {}
+@media (min-width: 480px) {
+    .contact-form input,
+    .contact-form submit,
+    .contact-form textarea {
+        width: 420px;
+    }
+}
 
 
 /* Small devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"] {
-        padding-top: 25px;
-        padding-right: 0;
-        padding-bottom: 25px;
-        padding-left: 10px;
-        margin-bottom: 25px;
-        background-color: white;
-        border: 1px solid #ccc;
-        display: inline-block;
-        height: 20px;
-        font-size: 14px;
-        color: #373737;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
-    }
-    .contact-form input {
-        width: 445px;
-    }
+    .contact-form input,
+    .contact-form submit,
     .contact-form textarea {
-        width: 445px;
-        padding-top: 15px;
-        padding-right: 0;
-        padding-bottom: 15px;
-        padding-left: 10px;
-        background-color: white;
-        border: 1px solid #ccc;
-        display: inline-block;
-        color: #373737;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
-    }
-    input[type="submit"].btn {
-        border: 0;
-        padding: 0 22px;
-        /* top bottom=0 left/right=22 */
-        margin-top: 10px;
-        color: #fff;
-        height: 50px;
-        width: 150px;
-        -webkit-transition: background .5s ease 0s;
-        -moz-transition: background .5s ease 0s;
-        transition: background .5s ease 0s;
-    }
-    .form {
-        margin-bottom: 60px;
-    }
-    .form p {
-        margin-bottom: 20px;
+        width: 360px;
     }
 }
 
 
 /* Medium devices (desktops, 992px and up) */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .contact-form input,
+    .contact-form submit,
+    .contact-form textarea {
+        width: 445px;
+    }
+}
