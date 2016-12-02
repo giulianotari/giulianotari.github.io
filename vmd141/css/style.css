@@ -593,12 +593,12 @@ article p {
     /* zero height so nav is hidden */
 }
 
-.nav .active {
+.nav.active {
     max-height: 25em;
     /* after menu click, nav expands */
 }
 
-.nav .active a {
+.nav.active a {
     color: #fff;
 }
 
