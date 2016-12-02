@@ -1,7 +1,7 @@
 /*form*/
 
 .form {
-    margin-bottom: 60px;
+    margin: 20px 0;
 }
 
 .form p {
@@ -28,11 +28,11 @@ input[type="tel"] {
 }
 
 .contact-form input {
-    width: 445px;
+    width: 300px;
 }
 
 .contact-form textarea {
-    width: 445px;
+    width: 300px;
     padding-top: 15px;
     padding-right: 0;
     padding-bottom: 15px;
