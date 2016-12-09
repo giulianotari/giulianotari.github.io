@@ -10,75 +10,99 @@ html {
     box-sizing: inherit;
 }
 
+
+/* mobile css */
+
+.alpha {
+    margin-left: 0;
+}
+
+.omega {
+    margin-right: 0;
+}
+
 .container {
-    width: 960px;
+    width: 300px;
     margin-right: auto;
     margin-left: auto;
 }
 
-.column {
-    float: left;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-.row {
-    overflow: hidden;
-}
-
-.one-whole {
-    width: 940px;
-}
-
-.one-quarter {
-    width: 220px;
-}
-
-.three-quarters {
-    width: 700px;
-}
-
-.one-half {
-    width: 460px;
-}
-
-.two-thirds {
-    width: 600px;
-}
-
-.one-third {
-    width: 275px;
-}
-
+.one-whole,
+.three-quarters,
+.one-half,
+.one-quarter,
+.two-thirds,
+.one-third,
 .one-sixth {
-    width: 140px;
+    width: 300px;
 }
+
+
+/*.column {
+    float: left;
+}
+*/
 
 .img-responsive {
     max-width: 100%;
     height: auto;
 }
 
-section.pageheader {
-    position: relative
-}
 
-.pageheader h2 {
-    z-index: 10;
+/* Mobile navigation */
+
+.menu-link {
     position: absolute;
-    top: 5em;
+    right: 50px;
+    /* adjust this value if need be */
+    top: 100px;
+    /* adjust this value if need be */
 }
 
-nav li {
-    display: inline-block;
-    margin-right: 2em;
-    padding-top: 2em;
+.nav {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+    max-height: 0;
 }
 
+.nav.active {
+    max-height: 25em;
+}
 
-/*nav ul {
-    float: right;
-}*/
+.nav.active a {
+    color: black;
+}
+
+.nav ul {
+    width: 100%;
+}
+
+.nav li {
+    display: block;
+    float: none;
+    border-top: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    border-left: 1px solid #dedede;
+    font-size: 18px;
+}
+
+.nav li:last-child {
+    border-bottom: 1px solid #dedede;
+}
+
+.nav a {
+    display: block;
+    padding: 5px;
+}
+
+.nav a:hover,
+.nav a:focus {
+    background-color: #c8c7c9;
+}
 
 h1,
 h2,
@@ -100,6 +124,7 @@ font-family: 'Lato', sans-serif;*/
 
 ul {
     list-style: none;
+    padding-left: 0;
 }
 
 a {
@@ -125,17 +150,18 @@ header {
 }
 
 .pageheader h2 {
+    display: inline-block;
     padding-left: 1em;
     font-size: 2em;
     text-transform: uppercase;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
 .pageheader h2 span {
     text-transform: none;
     font-size: 1em;
-    color: beige;
+    color: rgb(119, 117, 119);
     font-weight: 300;
 }
 
@@ -143,8 +169,12 @@ header {
     font-family: 'Swanky and Moo Moo', cursive;
     color: #B45737;
     text-transform: none;
-    padding-left: 3em;
     font-size: 1.5em;
+}
+
+.greybox {
+    background-color: rgb(237, 236, 237);
+    width: 100%;
 }
 
 footer {
@@ -154,6 +184,7 @@ footer {
 
 footer p {
     font-style: italic;
+    padding-left: 1em;
 }
 
 footer a {
@@ -165,20 +196,22 @@ footer a:hover {
     color: rgb(119, 117, 119);
 }
 
-.pull-right {
+
+/*.pull-right {
     float: right;
     padding-right: .5em;
-}
+} */
 
 .practice li a {
     font-size: 12px;
     line-height: 1.5em;
 }
 
-.greybox {
+article {
     background-color: rgb(237, 236, 237);
-    padding-left: 1em;
-    padding-bottom: 3em;
+    width: 100%;
+    margin: 0;
+    padding: 1em;
 }
 
 .blackbox {
@@ -195,6 +228,7 @@ footer a:hover {
     padding: .5em;
     background-color: rgb(193, 191, 193);
     border-radius: 1em;
+    margin-top: 1em;
 }
 
 .button:hover {
@@ -241,4 +275,232 @@ footer a:hover {
 
 .topmargin h3 {
     margin-top: 2em;
+}
+
+
+/* update to .row class */
+
+.row:before,
+.row:after {
+    display: table;
+    content: " ";
+}
+
+.row:after {
+    clear: both;
+}
+
+
+/*MEDIA QUERY*/
+
+@media (min-width: 768px) {
+    .container {
+        width: 960px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .column {
+        float: left;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .row {
+        overflow: hidden;
+    }
+    .one-whole {
+        width: 940px;
+    }
+    .one-quarter {
+        width: 220px;
+    }
+    .three-quarters {
+        width: 700px;
+    }
+    .one-half {
+        width: 400px;
+    }
+    .two-thirds {
+        width: 600px;
+    }
+    .one-third {
+        width: 275px;
+    }
+    .one-sixth {
+        width: 140px;
+    }
+    .img-responsive {
+        max-width: 100%;
+        height: auto;
+    }
+    section.pageheader {
+        position: relative
+    }
+    .pageheader h2 {
+        z-index: 10;
+        position: absolute;
+        top: 5em;
+    }
+    .nav li {
+        display: inline-block;
+        border: 0 none;
+        margin-right: 1em;
+        padding-top: 2em;
+    }
+    .nav li:last-child {
+        border: 0 none;
+    }
+    .nav ul {
+        width: auto;
+    }
+    .nav a {
+        transition: all 0.15s ease-in-out;
+    }
+    .nav a:hover,
+    .active a {
+        background-color: transparent;
+        color: #B45737;
+    }
+    .nav {
+        max-height: none;
+    }
+    .menu-link {
+        display: none;
+    }
+    /*nav ul {
+    float: right;
+}*/
+    h1,
+    h2,
+    h3,
+    p,
+    a {
+        font-family: 'Lato', sans-serif;
+    }
+    p {
+        color: rgb(119, 117, 119);
+        line-height: 1.5em;
+        font-size: .75em;
+    }
+    /* font-family: 'Swanky and Moo Moo', cursive;
+font-family: 'Lato', sans-serif;*/
+    ul {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    a:hover {
+        color: #B45737;
+        transition: all 0.15s ease-in-out;
+    }
+    .logo {
+        font-family: 'Swanky and Moo Moo', cursive;
+        background-color: black;
+        color: azure;
+        padding: 1em;
+    }
+    header {
+        margin-top: 4em;
+        margin-bottom: 2em;
+    }
+    .pageheader h2 {
+        padding-left: 1em;
+        font-size: 2em;
+        text-transform: uppercase;
+        color: white;
+        font-weight: bold;
+    }
+    .pageheader h2 span {
+        text-transform: none;
+        font-size: 1em;
+        color: beige;
+        font-weight: 300;
+    }
+    .pageheader h2 em {
+        font-family: 'Swanky and Moo Moo', cursive;
+        color: #B45737;
+        text-transform: none;
+        padding-left: 3em;
+        font-size: 1.5em;
+    }
+    footer {
+        background-color: black;
+        padding-bottom: 3em;
+    }
+    footer p {
+        font-style: italic;
+    }
+    footer a {
+        color: rgb(119, 117, 119);
+    }
+    footer a:hover {
+        text-decoration: underline;
+        color: rgb(119, 117, 119);
+    }
+    .pull-right {
+        float: right;
+        padding-right: .5em;
+    }
+    .practice li a {
+        font-size: 12px;
+        line-height: 1.5em;
+    }
+    .greybox {
+        background-color: rgb(237, 236, 237);
+        padding-left: 1em;
+        padding-bottom: 3em;
+    }
+    .blackbox {
+        font-style: italic;
+        color: white;
+        background-color: black;
+        padding: .5em;
+        width: 7em;
+    }
+    .button {
+        text-transform: uppercase;
+        border: 1px solid rgb(119, 117, 119);
+        padding: .5em;
+        background-color: rgb(193, 191, 193);
+        border-radius: 1em;
+        margin-top: 1em;
+    }
+    .button:hover {
+        background-color: rgb(226, 223, 226);
+        transition: all 0.15s ease-in-out;
+    }
+    .center {
+        text-align: center;
+        margin-top: 3em;
+    }
+    .center h3 {
+        text-transform: uppercase;
+        font-size: .75em;
+        color: rgb(119, 117, 119);
+    }
+    .center a:hover {
+        font-weight: bold;
+    }
+    .midpagetwo {
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+    .midpagetwo h3 {
+        text-transform: uppercase;
+        font-size: .75em;
+        color: rgb(119, 117, 119);
+    }
+    .boxlist {
+        border: 1px solid rgb(226, 223, 226);
+        line-height: 0;
+        margin-bottom: .25em;
+    }
+    .boxlist .icon {
+        float: left;
+        padding: 1em;
+    }
+    .topmargin h3 {
+        margin-top: 2em;
+    }
 }
