@@ -1,0 +1,143 @@
+/* Box sizing */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    font-family: 'Chivo', sans-serif;
+    color: #404040;
+}
+
+.container {
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.col2,
+.col1 {
+    width: 300px;
+}
+
+.outlinebutton {
+    border: 3px solid;
+    border-color: #78133a;
+    color: #78133a;
+    border-radius: 4px;
+    padding: 12px;
+    width: 8em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.fillbutton {
+    background-color: #78133a;
+    color: #f5f5f5;
+    border-radius: 4px;
+    padding: 12px;
+    width: 8em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+li {
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+    padding: .5em;
+    color: #f5f5f5;
+    width: 12em;
+    text-align: center;
+    list-style: none;
+}
+
+.dark {
+    color: #404040;
+}
+
+h1 {
+    font-size: 2em
+}
+
+h1,
+h2 {
+    font-weight: 300
+}
+
+h3 {
+    font-weight: 900;
+}
+
+.heading {
+    border-bottom: 2px solid #78133a;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .outlinebutton {
+        border: 3px solid;
+        border-color: #78133a;
+        color: #78133a;
+        border-radius: 4px;
+        padding: 12px;
+        width: 8em;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    .fillbutton {
+        background-color: #78133a;
+        color: #f5f5f5;
+        border-radius: 4px;
+        padding: 12px;
+        width: 8em;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    li {
+        margin-bottom: .5em;
+        padding-bottom: .5em;
+        padding: .5em;
+        color: #f5f5f5;
+        width: 12em;
+        text-align: center;
+        list-style: none;
+    }
+    .dark {
+        color: #404040;
+    }
+    h1 {
+        font-size: 2em
+    }
+    h1,
+    h2 {
+        font-weight: 300
+    }
+    h3 {
+        font-weight: 900;
+    }
+    .col2 {
+        width: 300px;
+        float: left;
+        margin-right: 50px;
+    }
+    .row {
+        overflow: hidden;
+    }
+    .col1 {
+        width: 760px;
+    }
+}
